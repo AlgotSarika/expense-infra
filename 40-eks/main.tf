@@ -1,9 +1,9 @@
 resource "aws_key_pair" "eks" {
   key_name   = "expense-eks"
+  #public_key = file("~/.ssh/eks.rsa.pub")
   public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCX+yziWWNOh8OCBh6deguL+CftzfdNrzHXk+GABgDNgqcvnHgM4IgH7FPNMX71AvzEBkkmIpfdAsN+VQBsphlL49U11I0t3ansF4Hx5nlHT16IKD+3KTtEJnzRVLDH6LtzhG1A8SQJY8aQ/33Gjhow/+6lTpxmU+Bj9cVHrDTXu/Q51chWU881+6YWo5qIZxDX3yFzFMiHaw7i386yJZI0nbjbHdjHAdS7aKshldgHQGaXNOX9YbKBeORqe4TH+YhfMdjPtRIbvoem4tRXO/uRwtPI6pcgPl2rGeUMR9td8a8cWgcAYcIbJ6oBhtSp7aC1aARiHM4PzD9VXVVQ7MssNxuMI2cJFzIaso0FwICPfexAfiVIV/S/gKAQ3S3y52m1S0J4aRzngN4PxRjf4n9L/3P0eRyJDGBEuIWtDPpguNDUqHaFlAsccLQ/ZC0/CViBplWWz9EQlsr9Phm/BjSSaTWhRONZP54WWDspzVGOMKOyU2H+wB5CPWFQK2PytbE= RTLenovo@DESKTOP-VNKI65R
 "
 }
-
 module "eks" {
   source  = "terraform-aws-modules/eks/aws"
   version = "~> 20.0"
